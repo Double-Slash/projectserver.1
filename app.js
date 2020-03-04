@@ -28,6 +28,7 @@ app.use(sassMiddleware({
   sourceMap: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('data'));
 
 ////////LINK//////////////////////////
 app.use('/', indexRouter);
@@ -53,3 +54,4 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+app.listen(3000);
