@@ -1,0 +1,10 @@
+extends layouts/main
+
+
+block content
+    
+    form(action=`/info${routes.search}` method="post")
+        input(type="text" name="term" placeholder="Search")
+    
+        h1 검색어: #{searchingBy}
+        h2 #{result}

@@ -1,0 +1,10 @@
+extends layouts/main
+
+
+block content
+    
+    form(action=`/info${routes.get}` method="post")
+        input(type="text" name="term" placeholder="Search")
+    
+        h1 사용자 이름: #{searchingBy}
+        
