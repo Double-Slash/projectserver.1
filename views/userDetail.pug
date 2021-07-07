@@ -1,0 +1,13 @@
+extends layouts/main
+include mixins/userBlock
+
+block content
+    .user-data
+        h1 검색어: #{searchingBy}
+        each user in results
+            +userBlock({
+                name:user.name,
+                age:user.age,
+                phoneNumber:user.phoneNumber,
+                gender:user.gender
+            })

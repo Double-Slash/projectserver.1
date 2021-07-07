@@ -1,0 +1,11 @@
+extends layouts/main
+include mixins/userBlock
+
+block content
+        each user in users
+            +userBlock({
+                name:user.name,
+                age:user.age,
+                phoneNumber:user.phoneNumber,
+                gender:user.gender
+            })

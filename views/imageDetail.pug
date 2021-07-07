@@ -1,0 +1,7 @@
+extends layouts/main
+
+block content
+    .image__info
+        each img in image
+            img(src=`/images${img.imageURL}`)
+            h1.image__title=img.title
